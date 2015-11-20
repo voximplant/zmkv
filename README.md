@@ -40,3 +40,22 @@ Helper library for creating mkv files
   ```
   
 6. Thats all!
+
+# How to build on Ubuntu linux
+
+```bash
+apt-get update
+apt-get install git cmake gcc g++
+
+apt-get install libmatroska-dev
+
+mkdir work_dir
+cd work_dir
+git clone https://github.com/voximplant/zmkv.git
+mkdir build
+cd build
+cmake ../zmkv
+make -j8
+
+```
+
