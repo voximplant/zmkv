@@ -3,18 +3,22 @@ Helper library for creating mkv files
 
 # How to use
 
-using namespace ZMKV;
+1. Library located in namespace ZMKV:
 
-1. Create file writer, you can use default or make custom writer class derived from: MuxerIOWriterCallback
+    ```cpp
+    using namespace ZMKV;
+    ```
+2. Create file writer, you can use default or make custom writer class derived from: MuxerIOWriterCallback
 
     ```cpp
     MuxerIOWriterCallbackDefault muxerIOWriterCallbackDefault("./test.mkv");
     ```
-2. Create muxer:
+3. Create muxer:
+
     ```cpp
     Muxer muxer(muxerIOWriterCallbackDefault);
     ```
-3. Create tracks:
+4. Create tracks:
     
     ```cpp
     AudioCodecInfoACM audioCodecInfoACM(8000, 16, 1, ZMKV::wFormatTag::PCM);
@@ -26,7 +30,7 @@ using namespace ZMKV;
       
     VideoTrack videoTrack(muxer,videoCodecInfoH264,1,87654321);
     ```
-4. Fill tracks:
+5. Fill tracks:
   
   ```cpp
   ...
@@ -35,4 +39,4 @@ using namespace ZMKV;
   ...
   ```
   
-5. Thats all!
+6. Thats all!
